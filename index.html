@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuzzGuard - An Integrated Smart Indoor Flying Insect Control System Using ESP-32, Acoustic Detection, and a Mobile App Monitoring</title>
+  <meta name="description" content="BuzzGuard is a smart indoor flying insect control system using ESP-32, acoustic detection, and a mobile app for monitoring and automated response.">
+  <meta property="og:title" content="BuzzGuard - Smart Indoor Flying Insect Control System">
+  <meta property="og:description" content="Integrated IoT solution with acoustic detection, environmental monitoring, and mobile app control.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body> <!-- Animated Background --> 
+  <div class="background-animation"> 
+   <div class="lightning"></div> 
+   <div class="particles"></div> 
+  </div> <!-- Flying Mosquito Swarm --> 
+  <div id="mosquito-swarm"></div> <!-- Navigation --> 
+ <nav class="navbar">
+  <div class="container"> 
+   <div class="logo">
+    <img src="images/buzzguard_logo.png" alt="BuzzGuard Logo" class="logo-img" width="40" height="40">
+    <span class="logo-text">BuzzGuard</span>
+   </div>
+    <ul class="nav-links"> 
+     <li><a href="#home" class="nav-link active">Home</a></li> 
+     <li><a href="#about" class="nav-link">About</a></li> 
+     <li><a href="#features" class="nav-link">Features</a></li> 
+     <li><a href="#technology" class="nav-link">Technology</a></li> 
+     <li><a href="#problems" class="nav-link">Problems</a></li>
+     <li><a href="#solution" class="nav-link">Solution</a></li>
+     <li><a href="#team" class="nav-link">Team</a></li> 
+     <li><a href="#contact" class="nav-link">Contact</a></li> 
+     <li><a href="#feedback" class="nav-link">Feedback</a></li>
+     <li><a href="#download" class="nav-link">Download</a></li>
+      <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+    </ul> <button class="menu-toggle" aria-label="Toggle menu">☰</button> 
+  </div> 
+ </nav> <!-- Main Container for All Sections --> 
+  <main class="main-container" role="main"> <!-- Hero Section --> 
+   <section id="home" class="section active"> 
+    <div class="hero"> 
+     <div class="hero-background"></div> 
+     <div class="container hero-content"> 
+      <div class="hero-text"> 
+       <h1 class="hero-title"> <span class="title-main">BuzzGuard</span> <span class="title-sub">An Integrated Smart Indoor Flying Insect Control System Using ESP-32, Acoustic Detection, and a Mobile App Monitoring</span> </h1> 
+       <p class="hero-description"> A Next-Generation Detection and Monitoring System with ESP-32 Intelligence and Mobile Oversight </p> 
+<div class="hero-buttons"> <a class="btn btn-primary" href="learn-more.html">Learn More</a> <a class="btn btn-secondary" href="watch-demo.html">Watch Demo</a>
+       </div> 
+      </div> 
+      <div class="hero-image"> 
+       <img src="images/device.png" alt="BuzzGuard Device" class="device-img" data-smoke-anchor-x="52" data-smoke-anchor-y="30" />
+      </div> 
+     </div> 
+     <div class="scroll-indicator"> <span>Scroll Down</span> 
+      <div class="scroll-arrow">
+       ↓
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- About Section --> 
+   <section id="about" class="section"> 
+    <div class="about"> 
+     <div class="container"> 
+      <h2 class="section-title">About BuzzGuard</h2> 
+      <div class="about-content"> 
+       <div class="about-text"> 
+        <p class="lead"> BuzzGuard represents the future of indoor pest control, combining cutting-edge IoT technology with intelligent acoustic detection to create a seamless, automated solution for flying insect management. </p> 
+        <p> Developed as a capstone project at Assumption College of Davao, our system addresses the persistent challenges of indoor flying insect control in tropical environments. Through sophisticated wingbeat frequency analysis and environmental monitoring, BuzzGuard provides real-time detection and automated repellent activation. </p> 
+        <div class="stats"> 
+         <div class="stat-item"> <span class="stat-number">80%</span> <span class="stat-label">Detection Accuracy</span> 
+         </div> 
+         <div class="stat-item"> <span class="stat-number">3×</span> <span class="stat-label">Consecutive Detections to Confirm</span> 
+         </div> 
+         <div class="stat-item"> <span class="stat-number">24/7</span> <span class="stat-label">Monitoring</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="about-image"> 
+        <img src="images/BuzzGuard_app_device.jpg" alt="BuzzGuard App and Device" class="about-photo" loading="lazy" decoding="async" style="width:100%;height:auto;" /> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- Features Section --> 
+   <section id="features" class="section"> 
+    <div class="features"> 
+     <div class="container"> 
+      <h2 class="section-title">Key Features</h2> 
+      <div class="features-grid"> 
+       <div class="feature-card"> 
+        <div class="feature-icon">
+         🎵
+        </div> 
+        <h3>Acoustic Detection</h3> 
+        <p>Advanced I2S microphone captures and analyzes wingbeat frequencies (200-800 Hz) for precise insect identification</p> 
+       </div> 
+       <div class="feature-card"> 
+        <div class="feature-icon">
+         🌡️
+        </div> 
+        <h3>Environmental Monitoring</h3> 
+        <p>Real-time temperature and humidity tracking with DHT11 sensor for optimal performance</p> 
+       </div> 
+       <div class="feature-card"> 
+        <div class="feature-icon">
+         📱
+        </div> 
+        <h3>Mobile App Control</h3> 
+        <p>Intuitive Flutter-based app for remote monitoring, control, and instant notifications</p> 
+       </div> 
+       <div class="feature-card"> 
+        <div class="feature-icon">
+         ⚡
+        </div> 
+        <h3>Automated Response</h3> 
+        <p>Activates the essential oil diffuser only after 3 consecutive detections; timing configurable at 30, 45, or 60 seconds in the mobile app</p> 
+       </div> 
+       <div class="feature-card"> 
+        <div class="feature-icon">
+         🔋
+        </div> 
+        <h3>Power Efficient</h3> 
+        <p>Optimized ESP-32 system with dual power options for continuous operation</p> 
+       </div> 
+       <div class="feature-card"> 
+        <div class="feature-icon">
+         🌿
+        </div> 
+        <h3>Eco-Friendly</h3> 
+        <p>Natural citronella oil repellent system safe for families and pets</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- Technology Section --> 
+   <section id="technology" class="section"> 
+    <div class="technology"> 
+     <div class="container"> 
+      <h2 class="section-title">Technology Stack</h2> 
+      <div class="tech-content"> 
+       <div class="tech-category"> 
+        <h3>Hardware Components</h3> 
+        <div class="tech-list"> 
+         <div class="tech-item"> <span class="tech-name">ESP32</span> <span class="tech-desc">Dual-core microcontroller with Bluetooth 4.2</span> 
+         </div> 
+         <div class="tech-item"> <span class="tech-name">INMP441 I2S</span> <span class="tech-desc">High-precision MEMS microphone</span> 
+         </div> 
+         <div class="tech-item"> <span class="tech-name">DHT11 Sensor</span> <span class="tech-desc">Temperature &amp; humidity monitoring</span> 
+         </div> 
+         <div class="tech-item"> <span class="tech-name">Water Level Sensor</span> <span class="tech-desc">Essential oil level detection</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="tech-category"> 
+        <h3>Software &amp; Protocols</h3> 
+        <div class="tech-list"> 
+         <div class="tech-item"> <span class="tech-name">Flutter</span> <span class="tech-desc">Cross-platform mobile application</span> 
+         </div> 
+         <div class="tech-item"> <span class="tech-name">C++</span> <span class="tech-desc">ESP-32 firmware programming</span> 
+         </div> 
+         <div class="tech-item"> <span class="tech-name">Bluetooth BLE</span> <span class="tech-desc">Low-energy wireless communication</span> 
+         </div> 
+         <div class="tech-item"> <span class="tech-name">FFT Analysis</span> <span class="tech-desc">512-point frequency spectrum processing</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="system-architecture"> 
+       <h3>System Architecture</h3> 
+       <div class="architecture-diagram"> 
+        <div class="arch-layer"> 
+         <div class="arch-box">
+          Sensors Layer
+         </div> 
+         <div class="arch-items">
+          Audio • Environmental • Water Level
+         </div> 
+        </div> 
+        <div class="arch-arrow">
+         ↓
+        </div> 
+        <div class="arch-layer"> 
+         <div class="arch-box">
+          Processing Layer
+         </div> 
+         <div class="arch-items">
+          ESP-32 • FFT Analysis • Detection Logic
+         </div> 
+        </div> 
+        <div class="arch-arrow">
+         ↓
+        </div> 
+        <div class="arch-layer"> 
+         <div class="arch-box">
+          Control Layer
+         </div> 
+         <div class="arch-items">
+          Relay Module • Essential Oil Diffuser
+         </div> 
+        </div> 
+        <div class="arch-arrow">
+         ↓
+        </div> 
+        <div class="arch-layer"> 
+         <div class="arch-box">
+          Interface Layer
+         </div> 
+         <div class="arch-items">
+          Mobile App • Notifications • Data Visualization
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+    </div> 
+   </div> 
+  </section> <!-- Team Section --> 
+  <!-- Problems / Solution / Feedback / Download -->
+  <section id="problems" class="section">
+    <div class="container">
+      <h2 class="section-title">The Problems We Solve</h2>
+      <div class="features-grid">
+        <div class="feature-card"><h3>Persistent Indoor Insect Infestation</h3><p>Households continue to face problems with flying insects such as mosquitoes, flies, and gnats that spread diseases, contaminate food, and reduce comfort indoors.</p></div>
+        <div class="feature-card"><h3>Ineffectiveness of Traditional Methods</h3><p>Conventional pest control tools like sprays, coils, and traps only provide short-term relief, require manual effort, and may expose users to harmful chemicals.</p></div>
+        <div class="feature-card"><h3>Lack of Smart, Continuous Monitoring</h3><p>Existing control systems do not provide automated detection or real-time monitoring, leaving households without a sustainable or data-driven way to manage pest populations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solution" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Solution</h2>
+      <div class="features-grid">
+        <div class="feature-card"><h3>IoT-Based Automated Detection</h3><p>BuzzGuard uses acoustic and environmental sensors to automatically detect the presence of flying insects based on sound frequency, temperature, and humidity.</p></div>
+        <div class="feature-card"><h3>Automatic Repellent Activation</h3><p>Once insects are detected, the system triggers an essential-oil-based repellent through a smart diffuser, reducing insect activity without manual intervention or chemical sprays.</p></div>
+        <div class="feature-card"><h3>Mobile App Control and Alerts</h3><p>A Bluetooth-connected mobile application allows users to monitor real-time insect activity, receive alerts, and control or adjust the system for optimal household protection.</p></div>
+      </div>
+    </div>
+  </section>
+   <section id="team" class="section"> 
+    <div class="team"> 
+     <div class="container"> 
+      <h2 class="section-title">Development Team</h2>
+      <div class="team-brand">
+       <img src="images/team_logo.png" alt="BuzzGuard Team Logo" class="team-logo-img" loading="lazy" decoding="async" width="90" height="90">
+      </div>
+      <p class="team-intro"> Brought to you by dedicated students from Assumption College of Davao </p> 
+      <div class="team-grid"> 
+       <div class="team-member"> 
+        <div class="member-photo">
+         <img src="images/mike_collamat.jpg" alt="Mike Angelo N. Collamat" loading="lazy" decoding="async" width="80" height="80">
+        </div>
+        <h3>Mike Angelo N. Collamat</h3> 
+        <p class="member-role">Documentation Writter &amp; System Architect</p> 
+       </div> 
+       <div class="team-member"> 
+        <div class="member-photo">
+         <img src="images/ronald_eder.jpg" alt="Ronald Christian V. Eder" loading="lazy" decoding="async" width="80" height="80">
+        </div>
+        <h3>Ronald Christian V. Eder</h3> 
+        <p class="member-role">Hardware Engineer &amp; IoT Specialist</p> 
+       </div> 
+       <div class="team-member"> 
+        <div class="member-photo">
+         <img src="images/marc_pague.jpg" alt="Marc Jullan M. Pague" loading="lazy" decoding="async" width="80" height="80">
+        </div>
+        <h3>Marc Jullan M. Pague</h3> 
+        <p class="member-role">Software Developer &amp; Website Developer &amp; Mobile App Engineer </p> 
+       </div> 
+       <div class="team-member"> 
+        <div class="member-photo">
+         <img src="images/billy_salog.jpg" alt="Billy James T. Salog">
+        </div>
+        <h3>Billy James T. Salog</h3> 
+        <p class="member-role">Researcher </p> 
+       </div> 
+      </div> 
+      <div class="advisors"> 
+       <h3>Academic Advisors</h3> 
+       <div class="advisor-list"> 
+        <div class="advisor"> <strong>Mr. John Henly A. Montera</strong> <span>Capstone Adviser</span> 
+        </div> 
+        <div class="advisor"> <strong>Ms. Roselyn Biala, MIT</strong> <span>Capstone Instructor</span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="institution"> 
+       <div class="institution-logo">
+        🎓
+       </div> 
+       <h3>Assumption College of Davao</h3> 
+       <p>Davao City, Philippines</p> 
+       <p class="project-date">November 2025</p> 
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- Contact Section --> 
+   <section id="contact" class="section"> 
+    <div class="contact"> 
+     <div class="container"> 
+      <h2 class="section-title">Get In Touch</h2> 
+      <div class="contact-content"> 
+       <div class="contact-info"> 
+        <h3>Contact Information</h3> 
+        <div class="contact-item"> <span class="contact-icon">📍</span> 
+         <div> <strong>Location</strong> 
+          <p>Assumption College of Davao<br>Davao City, Philippines</p> 
+         </div> 
+        </div> 
+        <div class="contact-item"> <span class="contact-icon">📧</span> 
+         <div> <strong>Email</strong> 
+          <p>buzzguard.team@acd.edu.ph</p> 
+         </div> 
+        </div> 
+        <div class="contact-item"> <span class="contact-icon">📱</span> 
+         <div> <strong>Project Inquiry</strong> 
+          <p>For collaboration and inquiries</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="contact-form"> 
+        <h3>Send Us a Message</h3> 
+        <form id="contactForm"> 
+         <input type="text" name="name" id="contactName" placeholder="Your Name" required> 
+         <input type="email" name="email" id="contactEmail" placeholder="Your Email" required> 
+         <input type="text" name="Contact Number" id="contactContact Number" placeholder="Contact Number  " required>
+         <textarea name="message" id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+         <button type="submit" class="btn btn-primary">Send Message</button> 
+        </form> 
+       </div> 
+      </div>  
+     </div> 
+    </div> 
+  </section> 
+  <!-- Recent Feedback moved below Contact -->
+  <section id="feedback" class="section">
+    <div class="container">
+      <h2 class="section-title">Recent Feedback</h2>
+      <ul id="feedbackList" class="feedback-list"></ul>
+      <p id="feedbackEmpty" class="card-desc" aria-live="polite">No feedback yet. Be the first to send a message!</p>
+    </div>
+  </section>
+
+  <!-- Download BuzzGuard positioned below Recent Feedback, with QR option -->
+  <section id="download" class="section">
+    <div class="container">
+      <h2 class="section-title">Download BuzzGuard</h2>
+      <p class="title-sub">Choose a method: PIN or QR code.</p>
+      <div class="download-options">
+        <div class="download-card">
+          <h3>Download via PIN</h3>
+          <p class="card-desc">Enter the 6-digit PIN to access the installer.</p>
+          <p class="card-desc">Message the admin to get the PIN marcjullanp@gmail.com.</p>
+          <div class="hero-buttons">
+            <button id="downloadBtn" class="btn btn-primary">Download</button>
+          </div>
+        </div>
+        <div class="download-card">
+          <h3>Scan to Download</h3>
+          <p class="card-desc">Scan the QR code with your phone to download.</p>
+          <div class="qr-wrap">
+            <img src="images/buzzguard_qr_app.png" alt="BuzzGuard App Download QR Code" class="qr-image" loading="lazy" decoding="async" width="260" height="260" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main> <!-- Footer --> 
+  <footer class="footer"> 
+   <div class="container"> 
+    <div class="footer-content"> 
+     <section class="footer-section footer-about"> 
+     <div class="footer-brand">
+       <img src="images/buzzguard_logo.png" alt="BuzzGuard Logo" class="footer-logo" loading="lazy" decoding="async" width="40" height="40">
+       <img src="images/team_logo.png" alt="BuzzGuard Team Logo" class="footer-team-logo" loading="lazy" decoding="async" width="40" height="40">
+     </div>
+      <div class="footer-danger" role="group" aria-label="Danger video link">
+       <span class="danger-text">Danger: Do Not Click</span>
+       <a class="danger-btn" href="vid/do_not_click.mp4" target="_blank" rel="noopener" aria-label="Open danger video">
+        <svg class="danger-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+         <path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v2h2v-2zm0-8h-2v6h2V10z"/>
+        </svg>
+        <span>Danger</span>
+       </a>
+      </div>
+      <h4>BuzzGuard</h4> 
+      <p>A Next-Generation Detection and Monitoring System with ESP-32 Intelligence and Mobile Oversight</p> 
+     </section> 
+     <section class="footer-section"> 
+      <h4>Quick Links</h4> 
+      <ul> 
+       <li><a href="#home">Home</a></li> 
+       <li><a href="#about">About</a></li> 
+       <li><a href="#features">Features</a></li> 
+       <li><a href="#technology">Technology</a></li> 
+        <li><a href="#problems">Problems</a></li>
+        <li><a href="#solution">Solution</a></li>
+       <li><a href="#feedback">Feedback</a></li>
+       <li><a href="#download">Download</a></li>
+       <li><a href="#team">Team</a></li> 
+       <li><a href="#contact">Contact</a></li> 
+      </ul> 
+     </section> 
+     <section class="footer-section footer-contact"> 
+      <h4>Contact</h4> 
+      <ul> 
+        <ul>
+          <li><a href="mailto:marcjullanp@gmail.com">marcjullanp@gmail.com</a></li>
+          <li><a href="tel:+639162000000">0994 627 4643</a></li>
+          <li><a href="https://www.facebook.com/PirateCaptainn" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/imsostupidkid/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/marcjullan-pague-7600a2355/" target="_blank">LinkedIn</a></li>
+        </ul>
+
+
+
+      </ul> 
+     </section> 
+    </div> 
+    <div class="footer-bottom">
+      <p class="copyright">© 2025 BuzzGuard Team. All rights reserved.</p>
+    </div>
+   </div> 
+  </footer> <!-- Navigation Dots --> 
+  <!-- Download PIN Modal -->
+  <div id="downloadModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="downloadTitle">
+    <div class="modal-overlay" data-close="true"></div>
+    <div class="modal-content">
+      <h3 id="downloadTitle">Enter PIN to Download</h3>
+      <p class="modal-desc">Please enter the 6-digit PIN to continue.</p>
+      <input id="downloadPinInput" type="password" inputmode="numeric" maxlength="6" placeholder="Enter PIN" class="modal-input" aria-label="PIN" />
+      <div class="modal-actions">
+        <button id="confirmPinBtn" class="btn btn-primary">Confirm</button>
+        <button id="cancelPinBtn" class="btn btn-secondary" data-close="true">Cancel</button>
+      </div>
+      <p id="pinError" class="modal-error" aria-live="polite"></p>
+    </div>
+  </div>
+  <div class="nav-dots">
+    <div class="nav-dot active" data-section="home" aria-label="Go to Home"></div>
+    <div class="nav-dot" data-section="about" aria-label="Go to About"></div>
+    <div class="nav-dot" data-section="features" aria-label="Go to Features"></div>
+    <div class="nav-dot" data-section="technology" aria-label="Go to Technology"></div>
+    <div class="nav-dot" data-section="problems" aria-label="Go to Problems"></div>
+    <div class="nav-dot" data-section="solution" aria-label="Go to Solution"></div>
+    <div class="nav-dot" data-section="team" aria-label="Go to Team"></div>
+    <div class="nav-dot" data-section="contact" aria-label="Go to Contact"></div>
+    <div class="nav-dot" data-section="feedback" aria-label="Go to Feedback"></div>
+    <div class="nav-dot" data-section="download" aria-label="Go to Download"></div>
+  </div>
+  <script src="script.js" defer></script>
+ </body>
+</html>

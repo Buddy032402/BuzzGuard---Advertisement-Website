@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learn More • BuzzGuard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/buzzguard_logo.png" alt="BuzzGuard Logo" class="logo-img" />
+        <span class="logo-text">BuzzGuard</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section learn-page">
+    <!-- I. Hero Section: The Problem & The Solution -->
+    <section class="section hero learn-hero" aria-labelledby="learn-hero-title">
+      <div class="hero-background"></div>
+      <div class="container hero-content">
+        <div class="hero-title">
+          <h1 id="learn-hero-title" class="title-main">Reclaim Your Outdoors with BuzzGuard.</h1>
+          <p class="title-sub">The Ultimate, Chemical-Free Solution for Mosquito Control.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#how-it-works">How It Works</a>
+            <a class="btn btn-secondary" href="index.html">Back to Home</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/device.png" alt="BuzzGuard Device" class="device-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- II. How It Works: The Technology -->
+    <section id="how-it-works" class="section content-section">
+      <div class="container">
+        <h2>Engineered for Maximum Protection.</h2>
+        <div class="text-block">
+          <p>BuzzGuard is built with precision-engineered hardware and intelligent software integration to deliver continuous and reliable indoor insect defense. At its core, the system combines ESP32 microcontroller technology, acoustic frequency detection, and environmental monitoring to ensure accurate and efficient operation.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Triple-Action Attraction</h3>
+            <ul>
+              <li><strong>Triple-Action Attraction:</strong> Through the INMP441 sound sensor, BuzzGuard detects the distinct wingbeat frequencies of insects such as mosquitoes, flies, and gnats. Each species produces a unique sound signature—allowing the system to differentiate insect activity from background noise and respond only to valid detections.</li>
+              <li><strong>Environmental Condition Analysis:</strong> Using the integrated DHT11 temperature and humidity sensors, BuzzGuard monitors indoor environmental parameters that directly affect insect behavior and flight patterns. This adaptive data helps predict peak insect activity periods, ensuring that the system activates precisely when insects are most active.</li>
+              <li><strong>Behavior-Based Response Optimization:</strong> The system interprets acoustic and environmental data together to determine when to activate the ultrasonic atomizer repellent. This synchronized response mimics natural attraction and deterrence cycles, achieving maximum effectiveness with minimal power and repellent use.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- III. Key Features & Advantages -->
+    <section id="features" class="section content-section">
+      <div class="container">
+        <h2>Key Features & Advantages</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>1.Precision Acoustic Detection</h3>
+            <p>Equipped with the INMP441 I2S sound sensor, BuzzGuard detects the distinct wingbeat frequencies of mosquitoes, flies, and gnats.</p>
+            <p>This technology enables real-time identification of flying insects based on their acoustic signatures, even in variable lighting and noise conditions.</p>
+          </div>
+          <div class="feature-card">
+            <h3>2. Environmental Intelligence</h3>
+            <p>Using DHT11 temperature and humidity sensors, the system continuously monitors environmental conditions that influence insect behavior.</p>
+            <p>This adaptive sensing allows BuzzGuard to refine detection accuracy and predict activity patterns for more targeted response.          </div>
+          <div class="feature-card">
+            <h3>3. Automated Repellent Activation</h3>
+            <p>Once insect presence is confirmed, the system automatically triggers an ultrasonic atomizer that disperses natural essential oils like citronella.</p>
+            <p>This eco-friendly repellent provides an effective barrier without harmful chemicals, ensuring safe operation for people and pets.</p>
+          </div>
+          <div class="feature-card">
+            <h3>4. Smart Control and Monitoring</h3>
+            <p>The Bluetooth-connected mobile app serves as the user’s command center—providing real-time notifications, sensor data, and manual or automatic control options.</p>
+            <p>Users can adjust system behavior, view detection logs, and monitor environmental readings from their phones.</p>
+          </div>
+          <div class="feature-card">
+            <h3>5. Safety and Reliability Mechanisms</h3>
+            <p>BuzzGuard includes built-in safeguards such as automatic shutdown on overheating, power fluctuations, or low repellent levels, ensuring consistent performance and extended hardware lifespan.</p>
+            <p>Its energy-efficient design also supports long-term operation with minimal maintenance.</p>
+          </div>
+          <div class="feature-card">
+            <h3>6. Eco-Friendly and Sustainable Design</h3>
+            <p>The system’s reliance on natural essential oils, low-power IoT components, and modular hardware promotes sustainability and reduces chemical waste.</p>
+            <p>BuzzGuard delivers an environmentally responsible alternative to traditional insect control methods while maintaining high efficiency and user convenience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 BuzzGuard. All rights reserved.</p>
+    </div>
+  </footer>
+  <script defer src="script.js"></script>
+</body>
+</html>

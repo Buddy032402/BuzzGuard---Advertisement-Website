@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buzzguard — Watch Demo</title>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/buzzguard_logo.png" type="image/png" />
+  </head>
+  <body>
+    <header class="section" style="padding-top: 24px;">
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+        <a class="btn btn-secondary" href="index.html">← Back to Home</a>
+        <h1 style="margin:0;">Watch Demo</h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+      <p class="section-subtitle" style="text-align:center; margin-top:8px;">Explore our testing videos and see Buzzguard in action.</p>
+    </header>
+
+    <main class="section">
+      <div class="video-grid">
+        <article class="video-card" style="content-visibility:auto; contain-intrinsic-size: 360px 220px;">
+          <div class="video-title">Testing 1 — Core Functionality</div>
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline width="640" height="360">
+              <source src="vid/testing_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+
+        <article class="video-card" style="content-visibility:auto; contain-intrinsic-size: 360px 220px;">
+          <div class="video-title">Testing 2 — Field Scenario</div>
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline width="640" height="360">
+              <source src="vid/testing_2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+
+        <article class="video-card" style="content-visibility:auto; contain-intrinsic-size: 360px 220px;">
+          <div class="video-title">Testing 3 — Extended Demo</div>
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline width="640" height="360">
+              <source src="vid/testing_3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+      </div>
+
+      <section class="gallery-header" aria-labelledby="gallery-title">
+        <h2 id="gallery-title" class="section-title">Hardware &amp; Sensor Gallery</h2>
+        <p class="section-subtitle">Device views and core sensors used in BuzzGuard.</p>
+      </section>
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <figure class="gallery-figure">
+            <img src="images/incomplete_upper_view.png" alt="Incomplete Upper View" class="gallery-img" loading="lazy" decoding="async" />
+            <figcaption class="gallery-caption">Incomplete Upper View</figcaption>
+          </figure>
+        </article>
+        <article class="gallery-card">
+          <figure class="gallery-figure">
+            <img src="images/incomplete_side_view.png" alt="Incomplete Side View" class="gallery-img" loading="lazy" decoding="async" />
+            <figcaption class="gallery-caption">Incomplete Side View</figcaption>
+          </figure>
+        </article>
+        <article class="gallery-card">
+          <figure class="gallery-figure">
+            <img src="images/i2s_sensor.png" alt="I2S Microphone Sensor" class="gallery-img" loading="lazy" decoding="async" />
+            <figcaption class="gallery-caption">I2S Microphone Sensor</figcaption>
+          </figure>
+        </article>
+        <article class="gallery-card">
+          <figure class="gallery-figure">
+            <img src="images/dht_sensor.png" alt="DHT Temperature &amp; Humidity Sensor" class="gallery-img" loading="lazy" decoding="async" />
+            <figcaption class="gallery-caption">DHT Temp &amp; Humidity Sensor</figcaption>
+          </figure>
+        </article>
+        <article class="gallery-card">
+          <figure class="gallery-figure">
+            <img src="images/complete_upper_view.png" alt="Complete Upper View" class="gallery-img" loading="lazy" decoding="async" />
+            <figcaption class="gallery-caption">Complete Upper View</figcaption>
+          </figure>
+        </article>
+        <article class="gallery-card">
+          <figure class="gallery-figure">
+            <img src="images/complete_sidi_view.png" alt="Complete Side View" class="gallery-img" loading="lazy" decoding="async" />
+            <figcaption class="gallery-caption">Complete Side View</figcaption>
+          </figure>
+        </article>
+        <article class="gallery-card">
+          <figure class="gallery-figure">
+            <img src="images/water_sensor.png" alt="Water Sensor" class="gallery-img" loading="lazy" decoding="async" />
+            <figcaption class="gallery-caption">Water Sensor</figcaption>
+          </figure>
+        </article>
+      </div>
+    </main>
+
+    <footer class="section" style="text-align:center;">
+      <p class="card-desc">Videos are hosted locally for demo purposes.</p>
+    </footer>
+
+    <script defer src="script.js"></script>
+    <script defer src="gallery-sort.js"></script>
+  </body>
+  </html>
